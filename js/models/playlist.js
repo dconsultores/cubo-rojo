@@ -1,0 +1,1 @@
+Cubo.Models.Playlist = Backbone.Models.extend({});

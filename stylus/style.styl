@@ -1,0 +1,107 @@
+@import 'nib'
+@import 'normalize.styl'
+@import 'fonts.styl'
+
+// Colores
+gris_oscuro = #333;
+gris_claro = #818181;
+
+//
+h1
+	color red
+figure
+	overflow hidden
+	img
+		border-radius .4em
+		width 100%
+header
+	background gris_oscuro
+	border-bottom 1px solid gris_claro
+	margin-bottom .4em
+	figure
+		margin .4rem 1rem
+		width 5%
+	h1
+		margin .4rem 1rem
+		vertical-align top
+.name
+	color gris_oscuro
+.artist,
+.album
+	color gris_claro
+
+.player,
+.playlist
+	display inline-block
+	width 49%
+.player
+	figure
+		margin 0 auto
+		vertical-align top
+		width 80%
+	.control
+		margin-top .4rem
+		text-align center
+	.progress
+		margin .5em 0 0 0
+		.total
+			background gris_claro
+			border-radius .4em
+			margin 0 auto
+			height 5px
+			width 80%
+		.state
+			background red
+			border-radius .4em
+			height 5px
+			width 30%
+			animation 10s state infinite
+		.circle
+			background gris_oscuro
+			border-radius 50%
+			width 15px
+			height 15px
+			position absolute
+			right -5px
+			top -5px
+.playlist
+	border-left 1px solid gris_oscuro
+	max-height 42rem
+	overflow auto
+	padding 0 .4rem
+	vertical-align top
+	.song
+		border-bottom 1px solid gris_claro
+		margin-top 0
+		padding-top 0
+		vertical-align top
+		width 100%
+		figure
+			width 20%
+		.info
+			vertical-align top
+
+
+// Clases utilitarias
+.btn
+	color gris_claro
+	cursor pointer
+	font-size 2rem
+	margin-left 1rem
+	&:hover
+		color gris_oscuro
+.btn:first-of-type
+	margin-left 0
+.border-bottom
+	border-bottom 1px solid gris_claro
+.inline
+	display inline-block
+.relative
+	position relative
+
+// Animaciones
+@keyframes state
+	0%
+		width 0
+	100%
+		width 100%
